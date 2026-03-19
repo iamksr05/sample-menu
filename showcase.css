@@ -1,0 +1,140 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #F9F5EF;
+      color: #1A1008;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 40px;
+    }
+
+    .wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* top label */
+    .kicker {
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #B8843A;
+      margin-bottom: 24px;
+    }
+
+    /* title */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.08;
+      color: #1A1008;
+      margin-bottom: 6px;
+    }
+
+    h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: #C1440E;
+    }
+
+    .sub {
+      font-size: 0.85rem;
+      color: #9C8070;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    /* divider */
+    .rule {
+      width: 100%;
+      height: 1px;
+      background: rgba(14, 10, 6, 0.1);
+      margin-bottom: 32px;
+    }
+
+    /* each design entry */
+    .entry {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(14, 10, 6, 0.07);
+      gap: 16px;
+    }
+
+    .entry:last-child {
+      border-bottom: none;
+    }
+
+    .entry-left {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+    }
+
+    .num {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      color: #C8B090;
+      font-weight: 500;
+      flex-shrink: 0;
+      width: 20px;
+    }
+
+
+    .entry-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1A1008;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .entry-desc {
+      font-size: 0.78rem;
+      color: #9C8070;
+    }
+
+    .open-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #C1440E;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: opacity 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .open-link:hover {
+      opacity: 0.6;
+    }
+
+    .open-link svg {
+      width: 11px;
+      height: 11px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* footer */
+    .foot {
+      margin-top: 48px;
+      font-size: 0.7rem;
+      color: #C8B090;
+      letter-spacing: 0.06em;
+    }

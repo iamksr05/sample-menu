@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Restaurant — Authentic North Indian Restaurant</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav id="navbar">
+    <div class="nav-logo">Demo Restaurant</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2026 &nbsp;&middot;&nbsp; City Center</p>
+      <h1 class="hero-title">Demo<em>Restaurant</em></h1>
+
+      <p class="hero-tagline">Authentic flavors, crafted with passion</p>
+      <div class="hero-divider"></div>
+      <a href="#menu" class="hero-cta">Explore the Menu</a>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ MENU ══ -->
+  <section id="menu">
+    <p class="section-kicker reveal">What We Serve</p>
+    <h2 class="section-heading reveal">Our Menu</h2>
+    <p class="section-sub reveal">Freshly prepared every day with recipes passed down through generations</p>
+
+    <div class="controls reveal">
+      <!-- Search -->
+      <div class="search-wrap">
+        <span class="search-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7.5" />
+            <line x1="17" y1="17" x2="22" y2="22" />
+          </svg>
+        </span>
+        <input type="text" id="searchInput" placeholder="Search dishes by name or ingredient..." oninput="filterMenu()">
+      </div>
+
+      <!-- Filter pills -->
+      <div class="filter-pills">
+        <button class="pill active" onclick="setFilter('all', this)">All Dishes</button>
+        <button class="pill" onclick="setFilter('special', this)">Chef's Special</button>
+        <button class="pill" onclick="setFilter('bestseller', this)">Bestsellers</button>
+        <button class="pill" onclick="setFilter('new-item', this)">New Additions</button>
+      </div>
+    </div>
+
+    <!-- Category tabs -->
+    <div class="cat-tabs-wrap reveal">
+      <div class="cat-tabs" id="catTabs"></div>
+    </div>
+
+    <!-- Grid -->
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <p class="section-kicker reveal">Our Story</p>
+    <h2 class="section-heading reveal">Made with Love</h2>
+    <p class="section-sub reveal">The warmth of our kitchens, served to your table</p>
+
+    <p class="about-story reveal">
+      Demo Restaurant was born from a simple dream — to serve honest, hearty North Indian food the way it's made at home.
+      Every dish carries the story of slow-cooked dals, the scent of ghee in the morning, and the joy of a family meal
+      shared together.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg>
+        </div>
+        <h3>100% Fresh</h3>
+        <p>Ingredients sourced from local markets every single morning. No frozen shortcuts, ever.</p>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z" />
+          </svg>
+        </div>
+        <h3>Traditional Recipes</h3>
+        <p>Authentic masalas and cooking techniques passed down carefully through generations.</p>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4" />
+            <path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
+          </svg>
+        </div>
+        <h3>Hygienic Kitchen</h3>
+        <p>FSSAI certified. A clean, transparent kitchen you can trust with every bite.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="footer">
+    <div class="footer-logo">Demo Restaurant</div>
+    <div class="footer-tagline">Authentic flavors, crafted with passion</div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Address</h4>
+        <p>12, Civil Lines<br>City Center, State 12345</p>
+      </div>
+      <div class="footer-col">
+        <h4>Phone</h4>
+        <p>+91 99999 99999<br>+91 88888 88888</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Monday – Sunday<br>11:00 AM – 11:00 PM</p>
+      </div>
+    </div>
+    <div class="qr-box">
+      <div class="qr-square">
+        <span></span><span style="opacity:0.7"></span><span></span>
+        <span style="opacity:0.5"></span><span></span><span style="opacity:0.8"></span>
+        <span></span><span style="opacity:0.6"></span><span></span>
+      </div>
+      <p>Scan to share this menu</p>
+    </div>
+    <p class="footer-copy">&copy; 2026 Demo Restaurant. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
