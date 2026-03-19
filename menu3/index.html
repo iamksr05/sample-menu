@@ -1,122 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Demo Restaurant</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Jost:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style-updated.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Your Restaurant</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-updated.css">
 </head>
-
 <body>
-  <div class="shell">
+<div class="shell">
 
-    <!-- ════ SPLASH ════ -->
-    <div id="splash">
-      <div class="sp-bg"></div>
-      <div class="sp-scrim"></div>
-      <div class="sp-body">
-        <div class="sp-eyebrow">Authentic North Indian Cuisine</div>
-        <div class="sp-name"><em>Restaurant</em></div>
-        <div class="sp-rule"></div>
-        <div class="sp-tagline">Ghar Jaisa Khana,<br>Dil Se Banaya</div>
-        <button class="sp-cta" onclick="openApp()">
-          View Menu <span class="sp-arr"></span>
-        </button>
+<!-- ════ SPLASH ════ -->
+<div id="splash">
+  <div class="sp-bg"></div>
+  <div class="sp-scrim"></div>
+  <div class="sp-body">
+    <div class="sp-eyebrow">Authentic Cuisine</div>
+    <div class="sp-name">Your<em>Brand</em></div>
+    <div class="sp-rule"></div>
+    <div class="sp-tagline">Authentic Flavors,<br>Made With Love</div>
+    <button class="sp-cta" onclick="openApp()">
+      View Menu <span class="sp-arr"></span>
+    </button>
+  </div>
+</div>
+
+<!-- ════ APP ════ -->
+<div id="app">
+
+  <div class="topbar">
+    <div class="tb-logo">Your<em>Logo</em></div>
+    <button class="tb-btn" onclick="toggleSearch()">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
+  </div>
+
+  <div class="scroll-area" id="scrollArea">
+
+    <!-- Hero -->
+    <div class="hero-strip">
+      <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=900&q=85" data-old="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMjEwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjIxMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImhnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzhCM0EwMCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNDODZBMTAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iMjEwIiBmaWxsPSJ1cmwoI2hnKSIvPgogIDxjaXJjbGUgY3g9IjgwMCIgY3k9IjQwIiByPSIxMjAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiLz4KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxODAiIHI9IjgwIiBmaWxsPSJyZ2JhKDAsMCwwLDAuMSkiLz4KICA8Y2lyY2xlIGN4PSI3MDAiIGN5PSIxODAiIHI9IjYwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIi8+Cjwvc3ZnPg==" alt="Biryani" loading="eager">
+      <div class="hs-overlay">
+        <div class="hs-label">Today's Highlight</div>
+        <div class="hs-title">Veg Biryani</div>
+        <div class="hs-desc">Saffron basmati, slow dum-cooked</div>
+        <div class="hs-price">&#8377; 180</div>
       </div>
     </div>
 
-    <!-- ════ APP ════ -->
-    <div id="app">
-
-      <div class="topbar">
-        <div class="tb-logo">Demo<em>Restaurant</em></div>
-        <button class="tb-btn" onclick="toggleSearch()">
-          <svg viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="7" />
-            <line x1="16.5" y1="16.5" x2="22" y2="22" />
-          </svg>
-        </button>
+    <!-- Sticky filter -->
+    <div class="filter-wrap">
+      <div class="cat-tabs" id="catTabs"></div>
+      <div class="pill-row">
+        <button class="qp on" id="qp-all" onclick="setQ('all')">All Dishes</button>
+        <button class="qp"    id="qp-bs"  onclick="setQ('bs')">Bestsellers</button>
+        <button class="qp"    id="qp-sp"  onclick="setQ('sp')">Chef's Special</button>
       </div>
-
-      <div class="scroll-area" id="scrollArea">
-
-        <!-- Hero -->
-        <div class="hero-strip">
-          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=900&q=85"
-            data-old="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMjEwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjIxMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImhnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzhCM0EwMCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNDODZBMTAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iMjEwIiBmaWxsPSJ1cmwoI2hnKSIvPgogIDxjaXJjbGUgY3g9IjgwMCIgY3k9IjQwIiByPSIxMjAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNikiLz4KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxODAiIHI9IjgwIiBmaWxsPSJyZ2JhKDAsMCwwLDAuMSkiLz4KICA8Y2lyY2xlIGN4PSI3MDAiIGN5PSIxODAiIHI9IjYwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIi8+Cjwvc3ZnPg=="
-            alt="Biryani" loading="eager">
-          <div class="hs-overlay">
-            <div class="hs-label">Today's Highlight</div>
-            <div class="hs-title">Veg Biryani</div>
-            <div class="hs-desc">Saffron basmati, slow dum-cooked</div>
-            <div class="hs-price">&#8377; 180</div>
-          </div>
-        </div>
-
-        <!-- Sticky filter -->
-        <div class="filter-wrap">
-          <div class="cat-tabs" id="catTabs"></div>
-          <div class="pill-row">
-            <button class="qp on" id="qp-all" onclick="setQ('all')">All Dishes</button>
-            <button class="qp" id="qp-bs" onclick="setQ('bs')">Bestsellers</button>
-            <button class="qp" id="qp-sp" onclick="setQ('sp')">Chef's Special</button>
-          </div>
-          <div class="search-wrap" id="searchWrap">
-            <div class="search-inner">
-              <svg viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="7" />
-                <line x1="16.5" y1="16.5" x2="22" y2="22" />
-              </svg>
-              <input type="text" id="searchInput" placeholder="Search dishes..." oninput="onSearch(this.value)">
-            </div>
-          </div>
-        </div>
-
-        <div id="menuContent"></div>
-
-      </div><!-- /scroll-area -->
-
-      <div class="bottom-nav">
-        <div class="bn active">
-          <svg viewBox="0 0 24 24">
-            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" />
-            <path d="M9 21V12h6v9" />
-          </svg>
-          <span>Home</span>
-        </div>
-        <div class="bn" onclick="document.getElementById('scrollArea').scrollTo({top:0,behavior:'smooth'})">
-          <svg viewBox="0 0 24 24">
-            <rect x="3" y="3" width="7" height="7" rx="1" />
-            <rect x="14" y="3" width="7" height="7" rx="1" />
-            <rect x="3" y="14" width="7" height="7" rx="1" />
-            <rect x="14" y="14" width="7" height="7" rx="1" />
-          </svg>
-          <span>Menu</span>
-        </div>
-        <div class="bn" onclick="toggleSearch()">
-          <svg viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="7" />
-            <line x1="16.5" y1="16.5" x2="22" y2="22" />
-          </svg>
-          <span>Search</span>
-        </div>
-        <div class="bn">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="8" r="4" />
-            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-          </svg>
-          <span>About</span>
+      <div class="search-wrap" id="searchWrap">
+        <div class="search-inner">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+          <input type="text" id="searchInput" placeholder="Search dishes..." oninput="onSearch(this.value)">
         </div>
       </div>
+    </div>
 
-    </div><!-- /app -->
-  </div><!-- /shell -->
+    <div id="menuContent"></div>
 
-  <script src="script-updated.js"></script>
+  </div><!-- /scroll-area -->
+
+  <div class="bottom-nav">
+    <div class="bn active">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="bn" onclick="document.getElementById('scrollArea').scrollTo({top:0,behavior:'smooth'})">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <span>Menu</span>
+    </div>
+    <div class="bn" onclick="toggleSearch()">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      <span>Search</span>
+    </div>
+    <div class="bn">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>About</span>
+    </div>
+  </div>
+
+</div><!-- /app -->
+</div><!-- /shell -->
+
+<script src="script-updated.js"></script>
 </body>
-
 </html>

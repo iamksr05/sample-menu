@@ -29,7 +29,7 @@ const menuData = [
   { id:23, name:"Butter Naan", desc:"Soft leavened bread brushed with butter, baked in tandoor", price:40, cat:"breads", veg:true, badges:["bestseller"], spice:0 },
   { id:24, name:"Garlic Naan", desc:"Fluffy naan topped with minced garlic and coriander", price:50, cat:"breads", veg:true, badges:["bestseller"], spice:0 },
   { id:25, name:"Lachha Paratha", desc:"Flaky multi-layered whole wheat bread from the tawa", price:50, cat:"breads", veg:true, badges:[], spice:0 },
-  { id:26, name:"Missi Roti", desc:"Spiced chickpea flour bread, a Demo City specialty", price:35, cat:"breads", veg:true, badges:["special"], spice:1 },
+  { id:26, name:"Missi Roti", desc:"Spiced chickpea flour bread, a Kanpur specialty", price:35, cat:"breads", veg:true, badges:["special"], spice:1 },
   { id:27, name:"Puri (2 pcs)", desc:"Deep-fried puffed whole wheat bread, served hot", price:30, cat:"breads", veg:true, badges:[], spice:0 },
   { id:28, name:"Cheese Naan", desc:"Stuffed with mozzarella cheese, baked till golden", price:70, cat:"breads", veg:true, badges:["new-item"], spice:0 },
 

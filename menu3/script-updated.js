@@ -71,7 +71,7 @@ const DISHES = [
   { id:18, name:'Garlic Naan',         desc:'Fluffy naan with minced garlic and fresh coriander',     price:50,  cat:'breads', veg:true, bs:true,  sp:false, spice:0, img:I.naan },
   { id:19, name:'Chur Chur Naan',      desc:'Crispy crumbled Punjabi naan, served warm with butter',  price:60,  cat:'breads', veg:true, bs:true,  sp:false, spice:0, img:I.naan },
   { id:20, name:'Laccha Paratha',      desc:'Flaky multi-layered whole wheat bread from the tawa',    price:50,  cat:'breads', veg:true, bs:false, sp:false, spice:0, img:I.paratha },
-  { id:21, name:'Missi Roti',          desc:'Spiced chickpea flour bread, a Demo City specialty',        price:35,  cat:'breads', veg:true, bs:false, sp:true,  spice:1, img:I.roti },
+  { id:21, name:'Missi Roti',          desc:'Spiced chickpea flour bread, a Kanpur specialty',        price:35,  cat:'breads', veg:true, bs:false, sp:true,  spice:1, img:I.roti },
   { id:22, name:'Tandoori Roti',       desc:'Whole wheat bread baked fresh in the tandoor',           price:20,  cat:'breads', veg:true, bs:false, sp:false, spice:0, img:I.roti },
 
   // RICE & BIRYANI
